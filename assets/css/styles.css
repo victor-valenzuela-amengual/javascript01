@@ -1,0 +1,82 @@
+@import "../css/bootstrap/css/bootstrap.css";
+/* @import "../css/bootstrap/css/bootstrap-grid.css";
+@import "../css/bootstrap/css/bootstrap-utilities.css";
+@import "../css/bootstrap/css/bootstrap-reboot.css"; */
+
+
+header {
+    text-align: center;
+}
+
+body {
+    background-color: royalblue;
+}
+
+footer {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-flow: column nowrap;
+    /*flex-direction flex-wrap*/
+    ;
+    justify-content: center;
+    align-items: center;
+    /* align-content: stretch; */
+
+    /* border: 1px solid blue; */
+    /* height: 500px; */
+    /* margin-left: 0px; */
+    /* margin: 0 0 0 0;       */
+    /* background-color:  rgb(83, 155, 83); */
+}
+
+.container div {
+    /*flex-grow flex-shrink flex-basis*/
+    /* flex: 0 1 auto;   */
+    width: 200px;
+    /* height: 200px; */
+    /* border: 1px solid red; */
+    margin-right: 40px;
+
+}
+
+.container .card {
+    background-color: rgb(83, 155, 83);
+}
+
+.container .card-body {
+    align-self: center;
+}
+
+.container .card-title {
+    /* margin-left: 30px; */
+    color: white;
+    font-size: small;
+}
+
+.btn-primary {
+    background-color: orange;
+}
+
+.div-boton {
+    text-align: center;
+}
+
+.container .circle {
+    border-radius: 50%;
+    /* border: 2px solid; */
+    height: 30px;
+    width: 30px;
+    display: inline;
+    float: right;
+}
+
+
+@media (min-width:576px) {
+    .container {
+        flex-flow: row nowrap;
+    }
+}

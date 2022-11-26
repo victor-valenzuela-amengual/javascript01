@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- <link rel="stylesheet" href="assets/css/bootstrap/css/bootstrap.css">     -->
+    <title>Document</title>
+    <script>
+        const precioLaptop = '600000';
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>Venta de portátiles</h1>
+    </header>
+    <div class="container">
+        <div class="card" style="width: 18rem;">
+            <img src="assets/img/laptop.webp" class="card-img-top" alt="laptop">
+            <div class="card-body">
+                <h5 class="card-title">ThinkPad T15p (15.6”, Intel)</h5>
+                <form>
+                    <div class="mb-3">
+                        <select class="form-control" name="sel" id="selcolor" placeholder="Color" onchange="var colorLaptop=this.value
+                            var circle=document.querySelector('#circulo')
+                            circle.style.backgroundColor=colorLaptop
+                            circle.style.border='2px'
+                            circle.style.border='solid'
+                            ">
+                            <option value="empty">Seleccione Color</option>
+                            <option value="red" id="color">Rojo</option>
+                            <option value="black" id="color">Negro</option>
+                            <option value="blue">Azul</option>
+                            <option value="green">Verde</option>
+                            <option value="yellow">Amarillo</option>
+                            <option value="white">Blanco</option>
+                        </select>
+                    </div>
+                    <div class="mb-3 mt-3">
+                        <input type="number" class="form-control" id="cantidad" placeholder="Cantidad">
+                    </div>
+                    <div>
+                        <label for="Precio" class="form-label">Precio: $600.000</label>
+                    </div>
+                </form>
+                <div class="div-boton">
+                    <button type="submit" class="btn btn-primary" onclick="
+                    let cant=document.querySelector('#cantidad')                    
+                    //console.log(colorLaptop)                    
+                    const total=document.querySelector('#total')
+                    const cantidad=document.querySelector('#cant')
+                    cantidad.innerHTML=cant.value
+                    let totalCompra = precioLaptop * cant.value
+                    total.innerHTML =new Intl.NumberFormat('es-Es', { style: 'currency', currency: 'CLP' }).format(totalCompra);
+                    //total.innerHTML= precioLaptop * cant.value">
+                        Calcular Total</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="item2">
+            <p>Total: <span id="total"></span></p>
+            <p>Cantidad: <span id="cant"></span></p>
+            <div>
+                Color:
+                <div class="circle" id="circulo">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        Desarrollado por VVA
+    </footer>
+</body>
+
+</html>

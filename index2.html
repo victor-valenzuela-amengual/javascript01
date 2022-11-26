@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <p>El arrendador vive en esta direccion <span class="direccion">_________</span>, comuna de <span class="comuna">__________</span> </p> -->
+    <div id="div1">
+        <img id="imag" src="assets/img/mod.jpg" alt="modi" height="200px">
+    </div>
+    <script>
+        /*const imagen = document.querySelector("#imag");
+        imagen.style.height = "200px";
+        var radio = Number(prompt("ingrese el radio para redondear la imagen"));
+        console.log(typeof (radio));
+        while (radio <= 0 || typeof (radio) != "number") {
+            alert("Radio debe ser un número positivo");
+            radio = prompt("ingrese el radio para redondear la imagen");
+        }
+
+        console.log(radio);
+        imagen.style.borderRadius = radio + "%";*/
+    </script>
+    <!-- <script>
+        var direccion=prompt("Ingrese dirección:");
+        var comuna=prompt("Ingrese comuna:");
+        var direccion2=document.querySelector("p .direccion");        
+        var comuna2=document.querySelector("p .comuna");
+        direccion2.innerHTML=direccion;
+        comuna2.innerHTML=comuna;
+    </script> -->
+    <button onclick="imag=document.querySelector('#imag')
+    imag.style.borderRadius='30%'">Agregar bordes</button>
+    <button onclick="imag=document.querySelector('#imag')
+    imag.style.borderRadius='0%'">Quitar bordes</button>
+
+    <div>
+        <ul>
+            <li id="ele1" onclick="ele=document.querySelector('#ele1') 
+            ele.style.textDecoration='line-through'"><a href="#">Elemento1</a> </li>
+            <li id="ele5" onmouseleave="ele=document.querySelector('#ele5') 
+            ele.style.textDecoration='none'"><a href="#">Elemento5</a> </li>
+            <li id="ele2" onclick="ele=document.querySelector('#ele2') 
+            ele.style.textDecoration='line-through'">Elemento2</li>
+            <li>Elemento3</li>
+            <li>Elemento4</li>
+        </ul>
+    </div>
+
+    <select name="sel" id="selcolor" onchange="var valor=this.value
+    var body=document.querySelector('p')
+    body.style.backgroundColor=valor
+    body.innerHTML=valor">
+        <option value="empty">Select...</option>
+        <option value="red" id="color">Rojo</option>
+        <option value="black" id="color">Negro</option>        
+        <option value="blue">Azul</option>
+        <option value="green">Verde</option>
+        <option value="yellow">Amarillo</option>
+        <option value="white">Blanco</option>
+    </select>
+    <p id="pcolor">psadiosahdasi askifhskaf</p>
+</body>
+
+</html>
